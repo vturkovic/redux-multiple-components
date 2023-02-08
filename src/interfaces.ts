@@ -2,17 +2,15 @@ export interface State {
     name: string;
     surname: string;
     address: string;
-    telephone: string;
+    telephone: number | null;
   }
   
   export interface UpdateNameAction {
     type: 'UPDATE_NAME';
-    payload: string;
-  }
-  
-  export interface UpdateSurnameAction {
-    type: 'UPDATE_SURNAME';
-    payload: string;
+    payload: {
+        name: string;
+        surname: string;
+    }
   }
   
   export interface UpdateAddressAction {
@@ -22,12 +20,11 @@ export interface State {
   
   export interface UpdateTelephoneAction {
     type: 'UPDATE_TELEPHONE';
-    payload: string;
+    payload: number;
   }
   
   export type Action =
     | UpdateNameAction
-    | UpdateSurnameAction
     | UpdateAddressAction
     | UpdateTelephoneAction;
   

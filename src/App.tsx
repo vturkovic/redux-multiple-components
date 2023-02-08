@@ -1,11 +1,16 @@
-import React from 'react';
 import './App.css';
 import NameComponent from './components/nameComponent';
+import AddressComponent from './components/addressComponent';
+import TelephoneComponent from './components/telephoneComponent';
 
 const App = () => {
   return (
-    <div >
+    <div>
       <NameComponent />
+      <br />
+      <AddressComponent />
+      <br />
+      <TelephoneComponent />
     </div>
   );
 }

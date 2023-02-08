@@ -1,18 +1,14 @@
 import {
     UpdateNameAction,
-    UpdateSurnameAction,
     UpdateAddressAction,
     UpdateTelephoneAction
   } from '../interfaces';
 
-export const updateName = (name: string): UpdateNameAction => ({
+export const updateName = (name: string, surname: string): UpdateNameAction => ({
     type: 'UPDATE_NAME',
-    payload: name
-});
-
-export const updateSurname = (surname: string): UpdateSurnameAction => ({
-    type: 'UPDATE_SURNAME',
-    payload: surname
+    payload: {
+        name, surname 
+    }
 });
 
 export const updateAddress = (address: string): UpdateAddressAction => ({
@@ -20,10 +16,7 @@ export const updateAddress = (address: string): UpdateAddressAction => ({
     payload: address
 });
 
-export const updateTelephone = (telephone: string): UpdateTelephoneAction => ({
+export const updateTelephone = (telephone: number): UpdateTelephoneAction => ({
     type: 'UPDATE_TELEPHONE',
     payload: telephone
 });
-  
-
-

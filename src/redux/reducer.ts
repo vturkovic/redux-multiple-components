@@ -4,7 +4,7 @@ const initialState: State = {
   name: '',
   surname: '',
   address: '',
-  telephone: ''
+  telephone: null
 };
 
 const reducer = (state = initialState, action: Action): State => {
@@ -12,12 +12,8 @@ const reducer = (state = initialState, action: Action): State => {
         case 'UPDATE_NAME':
         return {
             ...state,
-            name: action.payload
-        };
-        case 'UPDATE_SURNAME':
-        return {
-            ...state,
-            surname: action.payload
+            name: action.payload.name,
+            surname: action.payload.surname
         };
         case 'UPDATE_ADDRESS':
         return {

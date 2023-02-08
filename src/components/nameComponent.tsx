@@ -14,7 +14,7 @@ const NameComponent = () => {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    dispatch(updateName(name));
+    dispatch(updateName(name, surname));
     resetForm();
   };
 
@@ -28,6 +28,7 @@ const NameComponent = () => {
           id="name"
           value={name}
           onChange={e => setName(e.target.value)}
+          required
         />
       </div>
       <div>
@@ -38,6 +39,7 @@ const NameComponent = () => {
           id="surname"
           value={surname}
           onChange={e => setSurname(e.target.value)}
+          required
         />
       </div>
       <br />
